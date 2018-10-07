@@ -1,0 +1,1 @@
+riot.tag2("hikka-app",'<virtual><img src="/img/logo.svg" alt="Logo"></virtual>','hikka-app img,[data-is="hikka-app"] img{max-width:220px;padding:20px}',"",function(e){});
