@@ -1,26 +1,5 @@
-/* Кольори */
-/* Шрифти */
-@font-face {
-  font-family: Roboto-Regular;
-  src: url(../fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: Roboto-Light;
-  src: url(../fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: Roboto-Bold;
-  src: url(../fonts/Roboto-Bold.ttf);
-}
-/*==========  Desktop First Method  ==========*/
-/* Large Devices, Wide Screens */
-/* Medium Devices, Desktops */
-/* Small Devices, Tablets */
-/* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
-/*==========  Mobile First Method  ==========*/
-/* Custom, iPhone Retina */
-/* Extra Small Devices, Phones */
-/* Small Devices, Tablets */
-/* Medium Devices, Desktops */
-/* Large Devices, Wide Screens */
+/* Bootstrap's Media Queries */
+/* Large desktop */
+/* Portrait tablet to landscape and desktop */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */

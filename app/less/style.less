@@ -1,11 +1,82 @@
 @import "config";
 
-body {
-    background-color: #fff;
-    color: @black;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.ready {
-    padding: 20px;
-    font-size: 15px;
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: @black;
+	text-align: left;
+	background-color: @white_bg;
+}
+
+app-search {
+	input {
+		padding: 7px 50px 8px 22px;
+		background: transparent;
+		border: 1px solid #ced4da;
+		border-radius: 50px;
+		color: #212529;
+		font-size: 13px;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 3;
+		width: 240px;
+	}
+}
+
+app-nav {
+	display: block;
+	border-bottom: 1px solid rgba(0,0,0,0.07);
+	background: @white;
+	.inner {
+		padding: 20px 0px;
+		display: flex;
+		.logo {
+			display: flex;
+			flex: 0 0 120px;
+		}
+		ul {
+			display: flex;
+			margin-right: auto;
+			margin: 0;
+			list-style-type: none;
+			padding: 0;
+			margin-left: 20px;
+			li {
+				margin-right: 15px;
+				a {
+					font-size: 16px;
+					text-decoration: none;
+					font-weight: bold;
+					padding: 4px 0px;
+					color: @black;
+					display: block;
+					&:hover {
+						color: @red;
+					}
+				}
+			}
+		}
+		app-search {
+			margin-left: auto;
+		}
+	}
 }
