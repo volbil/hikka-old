@@ -6,6 +6,11 @@
 	box-sizing: border-box;
 }
 
+[class*="entypo"]:before {
+	font-family: 'EntypoRegular', sans-serif;
+	font-size: 16px;
+}
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
@@ -27,6 +32,22 @@ body {
 	background-color: @white_bg;
 }
 
+a {
+	color: @black;
+	text-decoration: underline;
+	&:hover {
+		color: @red;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.heart-color {
+	color: #dc3545;
+}
+
 app-search {
 	input {
 		padding: 7px 50px 8px 22px;
@@ -46,12 +67,24 @@ app-nav {
 	display: block;
 	border-bottom: 1px solid rgba(0,0,0,0.07);
 	background: @white;
+	.line {
+		width: 1px;
+		background: rgba(0, 0, 0, 0.05);
+		height: 30px;
+		margin: 0 15px;
+		    margin-top: 0px;
+		margin-top: 1px;
+	}
 	.inner {
 		padding: 20px 0px;
 		display: flex;
+		a {
+			padding: 4px 0px;
+		}
 		.logo {
 			display: flex;
 			flex: 0 0 120px;
+			padding: 0;
 		}
 		ul {
 			display: flex;
@@ -59,14 +92,13 @@ app-nav {
 			margin: 0;
 			list-style-type: none;
 			padding: 0;
-			margin-left: 20px;
+			margin-left: 25px;
 			li {
-				margin-right: 15px;
+				margin-right: 20px;
 				a {
 					font-size: 16px;
 					text-decoration: none;
 					font-weight: bold;
-					padding: 4px 0px;
 					color: @black;
 					display: block;
 					&:hover {
@@ -75,7 +107,8 @@ app-nav {
 				}
 			}
 		}
-		app-search {
+		.right-side	{
+			display: flex;
 			margin-left: auto;
 		}
 	}

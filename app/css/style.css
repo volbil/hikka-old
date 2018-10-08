@@ -5,6 +5,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+[class*="entypo"]:before {
+  font-family: 'EntypoRegular', sans-serif;
+  font-size: 16px;
+}
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -23,6 +27,19 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8f9fa;
+}
+a {
+  color: #212529;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fc0e49;
+}
+.text-center {
+  text-align: center;
+}
+.heart-color {
+  color: #dc3545;
 }
 app-search input {
   padding: 7px 50px 8px 22px;
@@ -43,12 +60,23 @@ app-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   background: #ffffff;
 }
+app-nav .line {
+  width: 1px;
+  background: rgba(0, 0, 0, 0.05);
+  height: 30px;
+  margin: 0 15px;
+  margin-top: 0px;
+  margin-top: 1px;
+}
 app-nav .inner {
   padding: 20px 0px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+app-nav .inner a {
+  padding: 4px 0px;
 }
 app-nav .inner .logo {
   display: -webkit-box;
@@ -59,6 +87,7 @@ app-nav .inner .logo {
   -webkit-flex: 0 0 120px;
       -ms-flex: 0 0 120px;
           flex: 0 0 120px;
+  padding: 0;
 }
 app-nav .inner ul {
   display: -webkit-box;
@@ -69,22 +98,25 @@ app-nav .inner ul {
   margin: 0;
   list-style-type: none;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 app-nav .inner ul li {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 app-nav .inner ul li a {
   font-size: 16px;
   text-decoration: none;
   font-weight: bold;
-  padding: 4px 0px;
   color: #212529;
   display: block;
 }
 app-nav .inner ul li a:hover {
   color: #fc0e49;
 }
-app-nav .inner app-search {
+app-nav .inner .right-side {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
 }

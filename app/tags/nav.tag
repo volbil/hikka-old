@@ -12,7 +12,11 @@
 					<a href="#">Про проект</a>
 				</li>
 			</ul>
-			<app-search></app-search>
+			<div class="right-side">
+				<app-search></app-search>
+				<div class="line"></div>
+				<a href="#">Вхід</a>
+			</div>
 		</div>
 	</div>
 </app-nav>
