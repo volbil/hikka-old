@@ -1,4 +1,3 @@
-&nbsp;
 <p align="center">
   <a href="https://hikka.me">
     <img src="https://i.imgur.com/jbFhSUk.png" width="200px" alt="Hikka" />
