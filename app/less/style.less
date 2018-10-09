@@ -49,6 +49,7 @@ a {
 }
 
 app-search {
+	position: relative;
 	input {
 		padding: 7px 50px 8px 22px;
 		background: transparent;
@@ -60,6 +61,22 @@ app-search {
 		position: relative;
 		z-index: 3;
 		width: 240px;
+	}
+	button {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
+		background: none;
+		border: none;
+		z-index: 4;
+		padding-top: 2px;
+		width: 40px;
+		opacity: 0.5;
+		&:hover {
+			color: @red;
+			opacity: 1;
+		}
 	}
 }
 
@@ -111,5 +128,12 @@ app-nav {
 			display: flex;
 			margin-left: auto;
 		}
+	}
+}
+
+app-slider {
+	.slide {
+		height: 350px;
+		background: #c87e8f;
 	}
 }

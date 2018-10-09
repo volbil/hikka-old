@@ -41,6 +41,9 @@ a:hover {
 .heart-color {
   color: #dc3545;
 }
+app-search {
+  position: relative;
+}
 app-search input {
   padding: 7px 50px 8px 22px;
   background: transparent;
@@ -54,6 +57,22 @@ app-search input {
   position: relative;
   z-index: 3;
   width: 240px;
+}
+app-search button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: none;
+  border: none;
+  z-index: 4;
+  padding-top: 2px;
+  width: 40px;
+  opacity: 0.5;
+}
+app-search button:hover {
+  color: #fc0e49;
+  opacity: 1;
 }
 app-nav {
   display: block;
@@ -119,4 +138,8 @@ app-nav .inner .right-side {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+}
+app-slider .slide {
+  height: 350px;
+  background: #c87e8f;
 }
