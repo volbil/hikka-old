@@ -1,7 +1,8 @@
-riot.tag2("hikka-app",'<app-nav></app-nav><router><route path="/"><app-home></app-home></route><route path="m/*"><app-reader></app-reader></route></router><app-footer></app-footer>',"","",function(p){});
+riot.tag2("hikka-app",'<app-nav></app-nav><router><route path="/"><app-home></app-home></route><route path="/m/*"><app-reader></app-reader></route><route path="/.."><app-404></app-404></route></router><app-footer></app-footer>',"","",function(p){});
+riot.tag2("app-404",'<virtual><div class="container text-center"><h2>¯\\_(404)_/¯</h2></div></virtual>',"","",function(t){});
+riot.tag2("app-home",'<virtual><app-slider></app-slider><div class="container mt-3"> Домашня сторінка </div></virtual>',"","",function(i){});
+riot.tag2("app-reader",'<virtual><div class="container"> {message} </div></virtual>',"","",function(a){this.on("route",a=>{this.message="Завантаження...",this.update({message:`Манґа ${a} не знайдена!`})})});
 riot.tag2("app-footer",'<div class="container text-center mt-3"> Made with <span class="entypo heart heart-color"></span> by <a target="_blank" href="https://github.com/volbil/hikka">Volbil</a></div>',"","",function(t){});
 riot.tag2("app-nav",'<div class="container"><div class="inner"><a class="logo" href="/"><img src="/img/logo.svg" alt="Logo"></a><ul class="links"><li><a href="/add">Додати манґу</a></li><li><a href="/about">Про проект</a></li></ul><div class="right-side"><app-search></app-search><div class="line"></div><a href="/login">Вхід</a></div></div></div>',"","",function(a){});
 riot.tag2("app-search",'<virtual><input type="text" placeholder="Шукати..."><button><span class="entypo search"></span></button></virtual>',"","",function(t){});
 riot.tag2("app-slider",'<virtual><div class="slide"></div></virtual>',"","",function(i){});
-riot.tag2("app-home",'<virtual><app-slider></app-slider><div class="container mt-3"> Домашня сторінка </div></virtual>',"","",function(i){});
-riot.tag2("app-reader",'<virtual><div class="container"> {message} </div></virtual>',"","",function(a){this.on("route",a=>{this.message="Завантаження...",this.update({message:`Манґа ${a} не знайдена!`})})});
