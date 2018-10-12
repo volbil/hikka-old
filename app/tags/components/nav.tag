@@ -1,21 +1,21 @@
 <app-nav>
 	<div class="container">
 		<div class="inner">
-			<a class="logo" href="#">
+			<a class="logo" href="/">
 				<img src="/img/logo.svg" alt="Logo">
 			</a>
 			<ul class="links">
 				<li>
-					<a href="#">Додати манґу</a>
+					<a href="/add">Додати манґу</a>
 				</li>
 				<li>
-					<a href="#">Про проект</a>
+					<a href="/about">Про проект</a>
 				</li>
 			</ul>
 			<div class="right-side">
 				<app-search></app-search>
 				<div class="line"></div>
-				<a href="#">Вхід</a>
+				<a href="/login">Вхід</a>
 			</div>
 		</div>
 	</div>

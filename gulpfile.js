@@ -3,7 +3,7 @@ var browserSync = require('browser-sync'),
     gulp = require('gulp'),
     less = require('gulp-less'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglifyjs'),
+    uglify = require('gulp-uglify-es').default,
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -67,6 +67,8 @@ gulp.task('scripts', function() {
             '!app/js/main.js',
             '!app/js/tags.js',
             'app/libs/js/jquery.min.js',
+            'app/libs/js/riot.js',
+            'app/libs/js/riot-route.js.js',
             'app/libs/js/**/*.js'
         ])
         .pipe(concat('libs.min.js'))
