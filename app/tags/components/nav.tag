@@ -1,22 +1,43 @@
-<app-nav>
+<app-nav class="navbar navbar-expand-lg">
 	<div class="container">
-		<div class="inner">
-			<a class="logo" href="/">
-				<img src="/img/logo.svg" alt="Logo">
-			</a>
-			<ul class="links">
-				<li>
-					<a href="/add">Додати манґу</a>
+		<a class="navbar-brand" href="/">
+			<img src="/img/logo-white.svg" width="100px">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="entypo list collapse-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navItems">
+			<ul class="navbar-nav mx-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Аніме</a>
 				</li>
-				<li>
-					<a href="/about">Про проект</a>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Манга</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Календар</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Про нас</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Правовласникам</a>
 				</li>
 			</ul>
-			<div class="right-side">
-				<app-search></app-search>
-				<div class="line"></div>
-				<a href="/login">Вхід</a>
-			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#"><span class="entypo bell"></span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Photo</a>
+					<div class="dropdown-menu" aria-labelledby="userDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<a class="dropdown-item" href="#">Something else here</a>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </app-nav>

@@ -1,8 +1,5 @@
 <app-search>
-	<virtual>
-		<input type="text" placeholder="Шукати...">
-		<button>
-			<span class="entypo search"></span>
-		</button>
-	</virtual>
+	<form>
+		<input type="text" placeholder="Знайти аніме, мангу, користувача…" class="input search" />
+	</form>
 </app-search>
