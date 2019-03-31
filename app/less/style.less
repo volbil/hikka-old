@@ -24,6 +24,7 @@ body {
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1;
+	letter-spacing: 1px;
 	color: black;
 	text-align: left;
 	background-color: @bg;
@@ -32,8 +33,12 @@ body {
 a {
 	color: black;
 	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.2s;
+
 	&:hover {
 		color: red;
+		text-decoration: none;
 	}
 }
 
@@ -45,6 +50,26 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+.avatar {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover; /* Do not scale the image */
+	object-position: center; /* Center the image within the element */
+	border: 2px solid white;
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		border-color: red;
+	}
+}
+
+.avatar.small {
+	width: 45px;
+	height: 45px;
+}
+
 .input {
 	font-size: 16px;
 	letter-spacing: 1.2px;
@@ -53,6 +78,7 @@ textarea:focus, input:focus{
 	padding: 10px 15px;
 	color: @dark;
 	background-color: @lightgray; 
+	transition: all 0.2s;
 }
 
 .input.search {
@@ -60,6 +86,15 @@ textarea:focus, input:focus{
 	min-height: 50px;
 	text-align: center;
 	border-radius: 0;
+
+	&:hover {
+		background-color: @gray;
+	}
+
+	&:focus {
+		background-color: @dark;
+		color: white;
+	}
 }
 
 .header {
@@ -68,6 +103,11 @@ textarea:focus, input:focus{
 	margin: 20px 0;
 	font-size: 18px;
 	border-bottom: 1px solid @lightgray;
+
+	.highlight {
+		padding-bottom: 8px;
+		border-bottom: 1px solid @dark;
+	}
 }
 
 app-nav {
@@ -116,6 +156,15 @@ release {
 			bottom: 0;
 			left: 0;
 			background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+			transition: all .2s;
+		}
+
+		&:hover {
+			&::before {
+				background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, #000000 100%);
+				top: 0;
+				transition: all .2s;
+			}
 		}
 	}
 
@@ -132,10 +181,68 @@ release {
 
 	.title {
 		font-size: 14px;
+		font-weight: 600;
+		color: @dark;
 		letter-spacing: 1px;
 		margin-top: 5px;
 		margin-bottom: 20px;
 		width: 150px;
 		word-wrap: break-word;
+		text-align: center;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+update {
+	.cover-container {
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		border-radius: 50%;
+		width: 75px;
+		height: 75px;
+		margin-right: 10px;
+	}
+
+	.title {
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	.action {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	time {
+		font-size: 14px;
+		color: @gray;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 100%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: @gray;
+		opacity: 0.2;
+		transition: all .2s;
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		&::before {
+			
+			top: 0;
+			transition: all .2s;
+		}
 	}
 }

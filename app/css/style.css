@@ -21,6 +21,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
+  letter-spacing: 1px;
   color: black;
   text-align: left;
   background-color: white;
@@ -28,9 +29,13 @@ body {
 a {
   color: black;
   text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 a:hover {
   color: red;
+  text-decoration: none;
 }
 p {
   font-size: 14px;
@@ -38,6 +43,29 @@ p {
 textarea:focus,
 input:focus {
   outline: none;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Do not scale the image */
+  -o-object-position: center;
+     object-position: center;
+  /* Center the image within the element */
+  border: 2px solid white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.avatar:hover {
+  border-color: red;
+}
+.avatar.small {
+  width: 45px;
+  height: 45px;
 }
 .input {
   font-size: 16px;
@@ -48,6 +76,8 @@ input:focus {
   padding: 10px 15px;
   color: #3C3C3C;
   background-color: #EFEBEA;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .input.search {
   width: 100%;
@@ -56,12 +86,23 @@ input:focus {
   -webkit-border-radius: 0;
           border-radius: 0;
 }
+.input.search:hover {
+  background-color: #C4C6C9;
+}
+.input.search:focus {
+  background-color: #3C3C3C;
+  color: white;
+}
 .header {
   position: relative;
   padding: 10px 0;
   margin: 20px 0;
   font-size: 18px;
   border-bottom: 1px solid #EFEBEA;
+}
+.header .highlight {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #3C3C3C;
 }
 app-nav {
   background-color: #3C3C3C;
@@ -104,6 +145,15 @@ release .cover-container:before {
   left: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
   background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+release .cover-container:hover::before {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  top: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 release .mark {
   -webkit-border-radius: 3px;
@@ -118,9 +168,59 @@ release .mark {
 }
 release .title {
   font-size: 14px;
+  font-weight: 600;
+  color: #3C3C3C;
   letter-spacing: 1px;
   margin-top: 5px;
   margin-bottom: 20px;
   width: 150px;
   word-wrap: break-word;
+  text-align: center;
+}
+release:hover {
+  cursor: pointer;
+}
+update .cover-container {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+}
+update .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+update .action {
+  font-size: 14px;
+  margin: 0;
+}
+update time {
+  font-size: 14px;
+  color: #C4C6C9;
+}
+update:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #C4C6C9;
+  opacity: 0.2;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+update:hover {
+  cursor: pointer;
+}
+update:hover::before {
+  top: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }

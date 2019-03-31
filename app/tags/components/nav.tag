@@ -26,11 +26,8 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#"><span class="entypo bell"></span></a>
-				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Photo</a>
+					<a class="nav-link" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/img/sliders/1.png" class="avatar small"></a>
 					<div class="dropdown-menu" aria-labelledby="userDropdown">
 						<a class="dropdown-item" href="#">Action</a>
 						<a class="dropdown-item" href="#">Another action</a>
