@@ -39,9 +39,9 @@
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<virtual each={release in releases}>
-						<div class="col-md-2 col-auto">
-							<release params={release}></release>
+					<virtual each={release in top}>
+						<div class="col-md col-auto">
+							<release params={release} class="big"></release>
 						</div>
 					</virtual>
 				</div>
@@ -83,11 +83,19 @@
 		</div>
 	</div>
 	<script>
+		this.top = [
+	      { cover: "https://dere.shikimori.org/system/animes/original/37999.jpg", rating: "PG-13", type: "TV", title: "Kaguya-sama wa Kokurasetai" },
+	      { cover: "https://kawai.shikimori.org/system/animes/original/37086.jpg", rating: "R-17", type: "TV", title: "Kakegurui××" },
+	      { cover: "https://nyaa.shikimori.org/system/animes/original/37510.jpg", rating: "PG-13", type: "TV", title: "Mob Psycho 100 II" },
+	      { cover: "https://moe.shikimori.org/system/animes/original/36792.jpg", rating: "PG-13", type: "TV", title: "Eromanga-sensei" },
+	      { cover: "https://dere.shikimori.org/system/animes/original/36474.jpg", rating: "PG-13", type: "TV", title: "Sword Art Online: Alicization" }
+	    ];
+
 		this.updates = [
-	      { cover: "https://dere.shikimori.org/system/animes/original/37999.jpg", title: "Kaguya-sama wa Kokurasetai" },
-	      { cover: "https://kawai.shikimori.org/system/animes/original/37086.jpg", title: "Kakegurui××" },
-	      { cover: "https://nyaa.shikimori.org/system/animes/original/37510.jpg", title: "Mob Psycho 100 II" },
-	      { cover: "https://moe.shikimori.org/system/animes/original/36792.jpg", title: "Eromanga-sensei" }
+	      { cover: "https://dere.shikimori.org/system/animes/original/37999.jpg", rating: "PG-13", type: "TV", title: "Kaguya-sama wa Kokurasetai" },
+	      { cover: "https://kawai.shikimori.org/system/animes/original/37086.jpg", rating: "R-17", type: "TV", title: "Kakegurui××" },
+	      { cover: "https://nyaa.shikimori.org/system/animes/original/37510.jpg", rating: "PG-13", type: "TV", title: "Mob Psycho 100 II" },
+	      { cover: "https://moe.shikimori.org/system/animes/original/36792.jpg", rating: "PG-13", type: "TV", title: "Eromanga-sensei" }
 	    ];
 
 	    this.releases = [

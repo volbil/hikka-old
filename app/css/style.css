@@ -175,10 +175,16 @@ release .title {
   margin-bottom: 20px;
   width: 150px;
   word-wrap: break-word;
-  text-align: center;
 }
 release:hover {
   cursor: pointer;
+}
+release.big .cover-container {
+  width: 190px;
+  height: 285px;
+}
+release.big .title {
+  font-size: 16px;
 }
 update .cover-container {
   position: relative;
