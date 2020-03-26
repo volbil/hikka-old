@@ -1,5 +1,6 @@
 <hikka-app>
 	<app-nav></app-nav>
+	<app-search></app-search>
 	<router>
 		<route path="/"><app-home></app-home></route> <!-- HOME -->
 		<route path="/m/*"><app-reader></app-reader></route> <!-- READER -->
